@@ -151,6 +151,7 @@ module.exports = function (entryPatterns, options) {
 
     return {
         getCombineConfig: function (config) {
+            config = config || {};
             var commonModule = config[commonModuleId];
 
             // 如果设置了公共模块
