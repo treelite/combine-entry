@@ -92,6 +92,7 @@ function getModules(file) {
  */
 function getEntryModules(patterns, options) {
     var modules = [];
+    var path = require('path');
     var glob = require('glob');
 
     if (!Array.isArray(patterns)) {
@@ -102,6 +103,7 @@ function getEntryModules(patterns, options) {
         var files = glob.sync(pattern, options);
 
         files.forEach(function (file) {
+            file = path.resolve(options.cwd || '', file);
             modules = modules.concat(getModules(file));
         });
     });
