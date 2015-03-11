@@ -169,7 +169,7 @@ module.exports = function (entryPatterns, options) {
                 }
                 else {
                     // 首先排除公共模块
-                    modules.push('!~' + commmonModuleId);
+                    modules.push('!~' + commonModuleId);
                 }
 
                 // 其次排除公共模块的依赖
