@@ -166,8 +166,7 @@ module.exports = function (entryPatterns, options) {
 
             // 排除公共模块及其依赖
             function excludeCommon(modules) {
-                var excludes = (commonModule || {}).modules || [];
-                if (excludes.length <= 0) {
+                if (!commonModule) {
                     return modules;
                 }
 
@@ -175,6 +174,7 @@ module.exports = function (entryPatterns, options) {
                 modules.push('!~' + commonModuleId);
 
                 // 其次排除公共模块的依赖
+                var excludes = (commonModule || {}).modules || [];
                 excludes.forEach(function (item) {
                     if (item.charAt(0) === '~') {
                         modules.push('!' + item);
