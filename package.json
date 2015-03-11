@@ -1,0 +1,33 @@
+{
+  "name": "combine-entry",
+  "version": "0.1.0",
+  "description": "Scan entry files for combine modules",
+  "main": "index.js",
+  "maintainers": {
+    "name": "treelite",
+    "email": "c.xinle@gmail.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:treelite/combine-entry.git"
+  },
+  "keywords": [
+    "Plugin",
+    "build",
+    "edp"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treelite/combine-entry/issues"
+  },
+  "homepage": "https://github.com/treelite/combine-entry",
+  "devDependencies": {
+    "jasmine-node": "^2.0.0-beta4"
+  },
+  "dependencies": {
+    "glob": "^5.0.1"
+  }
+}
