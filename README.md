@@ -1,4 +1,4 @@
-combine-entry
+combine-entry [![Build Status](https://travis-ci.org/treelite/combine-entry.svg)](https://travis-ci.org/treelite/combine-entry)
 ===
 
 Scan entry files for combine modules. A plugin for [moduleCompiler](https://github.com/ecomfe/edp/wiki/Build-Processors#modulecompiler)(come from [edp-buid](https://github.com/ecomfe/edp-build)).
