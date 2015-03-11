@@ -137,7 +137,7 @@ function extend(target) {
  * 生成moduleCompiler的combine配置项
  *
  * @public
- * @param {string|Array.<string>} entrypatterns 入口文件的匹配模式
+ * @param {string|Array.<string>} entryPatterns 入口文件的匹配模式
  * @param {Object=} options 配置参数
  * @param {string=} options.moduleId 公共模块id
  * @param {string=} options.cwd 搜索文件的起始目录，默认为process.cwd()
@@ -167,10 +167,9 @@ module.exports = function (entryPatterns, options) {
                 if (excludes.length <= 0) {
                     return modules;
                 }
-                else {
-                    // 首先排除公共模块
-                    modules.push('!~' + commonModuleId);
-                }
+
+                // 首先排除公共模块
+                modules.push('!~' + commonModuleId);
 
                 // 其次排除公共模块的依赖
                 excludes.forEach(function (item) {
